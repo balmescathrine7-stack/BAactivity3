@@ -1,7 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f7f5;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -9,52 +14,185 @@ a {
 }
 
 
+.navbar {
+    padding: 14px 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.hero-section {
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.85),
+            rgba(255, 255, 255, 0.85)
+        ),
+        url("../assets/images/Background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding-top: 70px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-section h1 {
+    line-height: 1.15;
+}
+
+.section-text {
+    max-width: 650px;
+}
+
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #d1e7dd;
+    color: #198754;
+
+    font-size: 30px;
+}
+
+.step-card {
+    background-color: white;
+
+    padding: 30px 20px;
+
+    border-radius: 12px;
+
+    height: 100%;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
+}
+
+.step-number {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #198754;
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 20px;
+}
+
+.cta-section {
+    background-color: #198754;
+}
+
+.cta-section .btn-light {
+    color: #198754;
+}
+
+.btn {
+    border-radius: 8px;
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-success:hover {
+    background-color: #157347;
+    border-color: #157347;
+}
+
+.btn-outline-success:hover {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.text-success {
+    color: #198754 !important;
+}
+
+
+/* AUTHENTICATION PAGE */
+
 .auth-page {
     min-height: 100vh;
     background-color: #f5f7f5;
 }
 
-
 .auth-image-section {
     position: relative;
 
+    min-height: 100vh;
+
     background-image:
-        url("../assets/images/Background.jpg");
+        linear-gradient(
+            rgba(25, 135, 84, 0.65),
+            rgba(25, 135, 84, 0.65)
+        ),
+        url("../assets/images/Background.png");
 
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 
+    display: flex;
     align-items: center;
     justify-content: center;
 
     overflow: hidden;
 }
 
-
-
 .auth-overlay {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background: rgba(0, 70, 30, 0.65);
+    display: none;
 }
-
 
 .auth-content {
     position: relative;
 
-    z-index: 2;
-
+    width: 100%;
     max-width: 550px;
 
     padding: 40px;
 }
-
 
 .auth-card {
     width: 100%;
@@ -70,14 +208,9 @@ a {
         0 10px 35px rgba(0, 0, 0, 0.08);
 }
 
-
-/* Registration card */
-
 .register-card {
     max-width: 520px;
 }
-
-
 
 .brand-icon {
     width: 65px;
@@ -96,16 +229,10 @@ a {
     font-size: 30px;
 }
 
-
-
 .form-label {
     font-weight: 600;
-
     margin-bottom: 7px;
 }
-
-
-/* Input group */
 
 .input-group-text {
     background-color: #f8f9fa;
@@ -115,34 +242,24 @@ a {
     color: #198754;
 }
 
-
-/* Input */
-
 .form-control {
-    border-left: none;
-
     min-height: 45px;
 }
 
-
-/* Textarea */
+.input-group .form-control {
+    border-left: none;
+}
 
 textarea.form-control {
     min-height: 70px;
 }
 
-
-/* Input focus */
-
 .form-control:focus {
     border-color: #198754;
 
-    box-shadow: none;
+    box-shadow:
+        0 0 0 0.2rem rgba(25, 135, 84, 0.15);
 }
-
-
-
-/* Validation error */
 
 label.error {
     display: block;
@@ -158,55 +275,105 @@ label.error {
     font-weight: 400;
 }
 
-
-/* Invalid input */
-
 .form-control.error {
     border-color: #dc3545;
 }
-
-
-/* Valid input */
 
 .form-control.valid {
     border-color: #198754;
 }
 
-.btn-success {
-    background-color: #198754;
 
-    border-color: #198754;
-}
-
-.btn-success:hover {
-    background-color: #157347;
-
-    border-color: #157347;
-}
-
-.text-success {
-    color: #198754 !important;
-}
+/* RESPONSIVE */
 
 @media (max-width: 991.98px) {
+
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .auth-image-section {
+        min-height: 500px;
+    }
+
+    .auth-content {
+        max-width: 600px;
+        padding: 30px 20px;
+    }
 
     .auth-card {
         max-width: 500px;
 
-        margin: 30px 15px;
+        margin: 30px auto;
 
         padding: 30px;
     }
 
+    .navbar-nav {
+        padding-top: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        margin-left: 0 !important;
+    }
+
+    .navbar-nav .btn {
+        width: 100%;
+        margin-top: 5px;
+    }
 }
 
+@media (max-width: 576px) {
 
-@media (max-width: 575.98px) {
+    .hero-section {
+        padding-top: 80px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section .btn {
+        width: 100%;
+        margin: 5px 0 !important;
+    }
+
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+
+        font-size: 25px;
+    }
+
+    .step-card {
+        padding: 25px 20px;
+    }
+
+    .auth-image-section {
+        min-height: 400px;
+
+        background-position: center;
+    }
+
+    .auth-content {
+        padding: 20px 15px;
+    }
 
     .auth-card {
         padding: 25px 20px;
 
         border-radius: 15px;
+
+        margin: 20px auto;
     }
 
     .brand-icon {
@@ -219,5 +386,4 @@ label.error {
     .auth-card h2 {
         font-size: 1.5rem;
     }
-
 }
