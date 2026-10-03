@@ -28,7 +28,7 @@ body {
             rgba(255, 255, 255, 0.85),
             rgba(255, 255, 255, 0.85)
         ),
-        url("../assets/images/background.png");
+        url("../assets/images/Background.png");
 
     background-size: cover;
     background-position: center;
