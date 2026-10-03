@@ -1,0 +1,199 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    padding: 14px 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+
+
+.hero-section {
+
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.85),
+            rgba(255, 255, 255, 0.85)
+        ),
+        url("../assets/images/background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding-top: 70px;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+
+
+
+.section-text {
+    max-width: 650px;
+}
+
+
+
+.feature-card {
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #d1e7dd;
+    color: #198754;
+
+    font-size: 30px;
+}
+
+
+.step-card {
+
+    background-color: white;
+
+    padding: 30px 20px;
+
+    border-radius: 12px;
+
+    height: 100%;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.step-number {
+
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #198754;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+
+.cta-section {
+    background-color: #198754;
+}
+
+
+
+.auth-page {
+    background-color: #f8f9fa;
+}
+
+
+.auth-image {
+
+    background-image:
+        linear-gradient(
+            rgba(25, 135, 84, 0.65),
+            rgba(25, 135, 84, 0.65)
+        ),
+        url("../assets/images/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px;
+}
+
+
+
+.auth-form {
+
+    width: 100%;
+    max-width: 520px;
+
+    padding: 30px;
+}
+
+
+.form-control {
+    border-radius: 8px;
+}
+
+.form-control:focus {
+
+    border-color: #198754;
+
+    box-shadow:
+        0 0 0 0.2rem rgba(25, 135, 84, 0.15);
+}
+
+
+.btn {
+    border-radius: 8px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 991px) {
+
+    .hero-section {
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .auth-form {
+        padding: 20px;
+    }
+
+}
