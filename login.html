@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>EcoCoins | Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="auth-page">
+    <div class="container-fluid min-vh-100">
+      <div class="row min-vh-100">
+        <!-- LEFT SIDE -->
+        <div class="col-lg-6 d-none d-lg-flex auth-image-section">
+          <div class="auth-overlay"></div>
+
+          <div class="auth-content text-white">
+            <div class="mb-4">
+              <i class="bi bi-recycle display-3"></i>
+            </div>
+
+            <h1 class="fw-bold display-5">Welcome to EcoCoins</h1>
+
+            <p class="lead">
+              Recycle today, earn EcoPoints, and help build a cleaner community.
+            </p>
+
+            <div class="d-flex gap-3 mt-4">
+              <div>
+                <i class="bi bi-recycle fs-3"></i>
+                <p class="small mt-2 mb-0">Recycle</p>
+              </div>
+
+              <div>
+                <i class="bi bi-star fs-3"></i>
+                <p class="small mt-2 mb-0">Earn Points</p>
+              </div>
+
+              <div>
+                <i class="bi bi-gift fs-3"></i>
+                <p class="small mt-2 mb-0">Get Rewards</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+          <div class="auth-card">
+            <!-- Logo -->
+            <div class="text-center mb-4">
+              <div class="brand-icon mx-auto mb-3">
+                <i class="bi bi-recycle"></i>
+              </div>
+
+              <h2 class="fw-bold mb-1">Welcome Back!</h2>
+
+              <p class="text-muted">Login to your EcoCoins account</p>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" novalidate>
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label"> Email Address </label>
+
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-envelope"></i>
+                  </span>
+
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                  />
+                </div>
+              </div>
+
+              <!-- Password -->
+              <div class="mb-3">
+                <label for="password" class="form-label"> Password </label>
+
+                <div class="input-group">
+                  <span class="input-group-text">
+                    <i class="bi bi-lock"></i>
+                  </span>
+
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                  />
+                </div>
+              </div>
+
+              <!-- Remember / Forgot -->
+              <div
+                class="d-flex justify-content-between align-items-center mb-4"
+              >
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="remember"
+                    name="remember"
+                  />
+
+                  <label class="form-check-label small" for="remember">
+                    Remember me
+                  </label>
+                </div>
+
+                <a href="#" class="small text-success"> Forgot Password? </a>
+              </div>
+
+              <!-- Login Button -->
+              <button type="submit" class="btn btn-success w-100 py-2">
+                <i class="bi bi-box-arrow-in-right me-1"></i>
+                Login
+              </button>
+            </form>
+
+            <!-- Register -->
+            <div class="text-center mt-4">
+              <p class="text-muted mb-0">
+                Don't have an account?
+                <a href="register.html" class="text-success fw-semibold">
+                  Register here
+                </a>
+              </p>
+            </div>
+
+            <!-- Back -->
+            <div class="text-center mt-3">
+              <a
+                href="index.html"
+                class="text-decoration-none text-muted small"
+              >
+                <i class="bi bi-arrow-left"></i>
+                Back to Home
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery Validation -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+
+    <!-- Login Validation -->
+    <script>
+      $(document).ready(function () {
+        $("#loginForm").validate({
+          rules: {
+            email: {
+              required: true,
+              email: true,
+            },
+
+            password: {
+              required: true,
+              minlength: 8,
+            },
+          },
+
+          messages: {
+            email: {
+              required: "Please enter your email address.",
+              email: "Please enter a valid email address.",
+            },
+
+            password: {
+              required: "Please enter your password.",
+              minlength: "Password must be at least 8 characters.",
+            },
+          },
+
+          errorElement: "div",
+
+          errorClass: "text-danger small mt-1",
+
+          errorPlacement: function (error, element) {
+            if (element.parent(".input-group").length) {
+              error.insertAfter(element.parent(".input-group"));
+            } else {
+              error.insertAfter(element);
+            }
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
